@@ -1,0 +1,4 @@
+.responsive-text {
+  font-size: clamp(0.775rem, 1.2vw, 1rem); /* min 14px, max 16px, scales with viewport */
+  line-height: 1.6;
+}
