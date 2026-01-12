@@ -7,7 +7,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   /* FIXED SIZE */
-  height: 220px;
+  height: clamp(180, 220px);
   width: 100%;
 
   /* STACKING */
@@ -25,12 +25,12 @@
   margin-bottom: 16px;
 
   i {
-    font-size: 3rem;
+    font-size: clamp(0.775rem, 1rem, 2rem); ;
   }
 }
 
 .card-text {
-  font-size: 18px;
+  font-size: clamp(0.775rem, 1.2vw, 1rem); 
   line-height: 1.4;
   font-weight: 500;
   color: #333;
