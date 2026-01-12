@@ -1,0 +1,13 @@
+<section
+  class="tile"
+  [ngStyle]="backgroundStyle"
+  [class.left]="contentPosition === 'left'"
+  [class.center]="contentPosition === 'center'"
+  [class.right]="contentPosition === 'right'"
+>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</section>

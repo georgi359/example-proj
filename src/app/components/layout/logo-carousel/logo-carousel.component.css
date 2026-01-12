@@ -1,0 +1,55 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 2rem;
+}
+
+/* Fade edges using mask (best) with fallback */
+.fade-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 30%,
+    black 50%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 30%,
+    black 50%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll linear infinite;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  margin: 0 32px;
+  object-fit: contain;
+}
+
+/* Projected components spacing */
+:host ::ng-deep > * {
+  margin: 0 32px;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

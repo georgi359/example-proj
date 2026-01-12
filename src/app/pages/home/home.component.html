@@ -1,0 +1,114 @@
+<header *transloco="let t">
+  <app-nav-spacer *transloco="let t"></app-nav-spacer>
+  <app-tile
+    backgroundImage="./assets/images/background-pic.jpg"
+    [fixedBackground]="true"
+    [fadeOnScroll]="true"
+    contentPosition="center"
+  >
+    <h1>{{ t('home.tizInvest') }}</h1>
+    <p>{{ t('home.investWithUs') }}</p>
+  </app-tile>
+  <app-tile [fixedBackground]="true" [fadeOnScroll]="true" contentPosition="center">
+    <div class="container responsive-text">
+      <div class="row justify-content-center">
+        <!-- LEFT COLUMN -->
+        <div
+          class="col-12 col-md-5 text-start p-2 m-2"
+          style="
+            border: 1px solid var(--border-800-70);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+            border-radius: 1rem;
+            background-color: var(--color-main);
+          "
+        >
+          <div class="m-2">
+            <div>
+              <h3 class="home-heading-text text-center">
+                <strong>Какво предлагаме</strong>
+              </h3>
+              <div class="home-separator"></div>
+            </div>
+
+            <ol class="wp-block-list">
+              <li>Експертни познания, възможности и обхват на глобалния пазар</li>
+              <li>Специализирано ноу-хау за всички видове логистика и индустриални проекти</li>
+              <li>Съгласуване на целите с инвеститорите</li>
+              <li>Предоставяне на пълен набор от услуги</li>
+              <li>Ефективно управление и бързо вземане на решения</li>
+              <li>Гъвкава структура на финансиране</li>
+              <li>Възможности за незабавна инвестиция</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div
+          class="col-12 col-md-5 text-start p-2 m-2"
+          style="
+            border: 1px solid var(--border-800-70);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+            border-radius: 1rem;
+            background-color: var(--color-main);
+          "
+        >
+          <div class="m-2">
+            <div class="">
+              <h3 class="home-heading-text text-center">
+                <strong>Защо да инвестирате при нас</strong>
+              </h3>
+              <div class=""></div>
+            </div>
+
+            <p>
+              Партнираме си с широк кръг инвеститори – от глобални институционални пенсионни фондове
+              и застрахователни компании, борсово търгувани дружества, инвестиционни мениджъри и
+              мултимениджъри до частни инвеститори, частни капиталови дружества, компании за
+              недвижими имоти и инвеститори с висока нетна стойност.
+            </p>
+
+            <ul class="wp-block-list">
+              <li>
+                Широкообхватно предоставяне на услуги – Пълен набор от услуги, съобразени със
+                специфичните изисквания
+              </li>
+              <li>
+                Гъвкавост – частен бизнес, позволяващ ефективно управление и бързина на вземане на
+                решения
+              </li>
+              <li>
+                Познаване на пазара – Специализирано ноу-хау за всички видове логистични и
+                индустриални имоти
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-tile>
+  <app-tile
+    backgroundImage="./assets/images/image-1-min.jpg"
+    [fixedBackground]="true"
+    [fadeOnScroll]="false"
+    contentPosition="center"
+  >
+    <h1>За нас</h1>
+    <p>
+      ТИЗ ИНВЕСТ АД (старо наименование „БЛЕК СИЙ СТАР” АД) е акционерно дружество, изцяло с
+      българско участие. Регистрирано е в Търговския регистър на Агенцията по вписванията през 2017
+      г. Седалището и адреса на управление на дружеството по регистрация е гр.Пловдив, бул.Марица
+      154, секция А, ет. 9. Дружеството е с вписан капитал 50 000 лв. разпределен в 5 000 акции с
+      номинална стойност 10 лв.
+    </p>
+    <app-logo-carousel
+      [images]="[
+        './assets/images/stock-exchange-icon-png-6.png',
+        './assets/images/stock-exchange-icon-png-6.png',
+        './assets/images/TIZ-Logo-White-300x220.png',
+        './assets/images/TIZ-Logo-White-300x220.png'
+      ]"
+    >
+
+    </app-logo-carousel>
+  </app-tile>
+</header>

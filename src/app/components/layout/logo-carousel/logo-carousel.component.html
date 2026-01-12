@@ -1,0 +1,29 @@
+<div class="carousel fade-mask">
+  <div
+    class="track"
+    [style.animationDuration]="speed + 's'"
+  >
+    <!-- First set -->
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+
+    <!-- Duplicate set -->
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+    <!-- Duplicate set -->
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+    <!-- Duplicate set -->
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </div>
+</div>
+
+<ng-template #content>
+  <!-- Image logos -->
+  <img
+    *ngFor="let img of images"
+    [src]="img"
+    class="logo"
+    alt="logo"
+  />
+
+  <!-- Angular components / projected content -->
+  <ng-content></ng-content>
+</ng-template>

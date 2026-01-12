@@ -1,0 +1,25 @@
+<main id="ivsmy" class="main-content" *transloco="let t; currentLang as currentLang">
+  <section class="contacts-page" *transloco="let t">
+    <div class="contacts-inner">
+      <h1 class="contacts-heading">{{ t('contacts.title') }}</h1>
+      <p class="contacts-lead">{{ t('contacts.description') }}</p>
+
+      <address class="contacts-address">
+        <strong>{{ t('contacts.addressLabel') }}</strong>
+        <div>123 Example Street</div>
+        <div>City, Country</div>
+        <div>{{ t('contacts.phone') }}: +1 555 555 555</div>
+      </address>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        class="map-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d533.5418929572542!2d23.30898269346284!3d42.69848328697292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85415980e31b%3A0xcc7c343717821ae6!2sUl.%20Opaltchenska!5e0!3m2!1sen!2sbg!4v1768208486227!5m2!1sen!2sbg"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+</main>

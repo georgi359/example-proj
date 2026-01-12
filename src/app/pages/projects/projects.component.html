@@ -1,0 +1,66 @@
+<app-nav-spacer></app-nav-spacer>
+<app-tile
+  backgroundImage="./assets/images/background-pic.jpg"
+  [fixedBackground]="true"
+  [fadeOnScroll]="true"
+  contentPosition="center"
+>
+  <div class="container responsive-text">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-3 text-start p-2 m-2">
+        <div class="row row-gap-md-2">
+          <app-fa-card icon="fa-solar-panel" class="p-2"
+            >Възобновяеми енергийни източници и решения за Еко-Индустриален парк</app-fa-card
+          >
+        </div>
+        <div class="row row-gap-md-2">
+          <app-fa-card icon="fa-building-flag" class="p-2">Инфраструктура – вътрешна и външна</app-fa-card>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 text-start p-2 m-2">
+        <div class="row row-gap-md-2">
+          <app-fa-card icon="fa-industry" class="p-2"
+            >Продажба на документално готови за строителство индустриални площи</app-fa-card
+          >
+        </div>
+        <div class="row row-gap-md-2">
+          <app-fa-card icon="fa-building" class="p-2"
+            >Отдаване под наем и продажба на имоти</app-fa-card
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</app-tile>
+<app-tile
+  [fixedBackground]="true"
+  [fadeOnScroll]="true"
+  contentPosition="center"
+  height="30vh"
+  [fadeOnScroll]="false"
+>
+  <h1>Инвеститори</h1>
+  <app-logo-carousel
+    [images]="[
+      './assets/images/stock-exchange-icon-png-6.png',
+      './assets/images/stock-exchange-icon-png-6.png',
+      './assets/images/TIZ-Logo-White-300x220.png',
+      './assets/images/TIZ-Logo-White-300x220.png'
+    ]"
+  >
+  </app-logo-carousel>
+</app-tile>
+<app-tile
+  backgroundImage="./assets/images/image-1-min.jpg"
+  [fixedBackground]="true"
+  [fadeOnScroll]="false"
+  contentPosition="center"
+>
+  <h1>Индустриален парк Скутаре</h1>
+  <img
+    src="./assets/images/DJI_0183.jpg"
+    alt="Industrial Park Skutare"
+    style="max-width: 40%; height: auto; border-radius: 8px; margin-top: 20px"
+  />
+</app-tile>

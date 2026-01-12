@@ -1,0 +1,151 @@
+<header class="header-wrapper" *transloco="let t; currentLang as currentLang">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <!-- Logo on the left -->
+    <a class="brand-link" href="/">
+      <img src="assets/images/TIZ-Logo-White-300x220.png" alt="Brand" class="brand-logo" />
+    </a>
+
+    <!-- Desktop Navigation Menu -->
+    <div class="nav-menu-desktop">
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="'/'">{{ t('nav.home') }}</a>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="'/projects'">{{ t('nav.projects') }}</a>
+      </div>
+
+      <!-- Investor Dropdown -->
+      <div class="nav-item-dropdown" (click)="toggleDropdown($event)">
+        <button class="dropdown-button" type="button" [attr.aria-expanded]="dropdownOpen">
+          <span class="dropdown-label">{{ t('nav.investor') }}</span>
+          <svg
+            class="dropdown-icon"
+            [class.rotate-180]="dropdownOpen"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="dropdown-menu" [class.open]="dropdownOpen" (click)="$event.stopPropagation()">
+          <a class="dropdown-link" [routerLink]="'/documents'">{{ t('nav.documents') }}</a>
+          <a class="dropdown-link" [routerLink]="'/financial-statements'">{{ t('nav.reports') }}</a>
+          <a class="dropdown-link" [routerLink]="'/other'">{{ t('nav.other') }}</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="'/contacts'">{{ t('nav.contacts') }}</a>
+      </div>
+
+      <!-- Language Button -->
+      <div class="nav-item">
+        <button
+          class="language-button"
+          (click)="toggleLang()"
+          type="button"
+          title="Change language"
+        >
+          {{ currentLang | uppercase }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      class="mobile-menu-toggle"
+      (click)="toggleMobileMenu()"
+      type="button"
+      [attr.aria-expanded]="mobileMenuOpen"
+    >
+      <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          *ngIf="!mobileMenuOpen"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+        <path
+          *ngIf="mobileMenuOpen"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </button>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" [class.open]="mobileMenuOpen" (click)="$event.stopPropagation()">
+      <a class="mobile-nav-link" [routerLink]="'/'" (click)="closeMobileMenu()">{{
+        t('nav.home')
+      }}</a>
+            <a class="mobile-nav-link" [routerLink]="'/projects'" (click)="closeMobileMenu()">{{
+        t('nav.projects')
+      }}</a>
+
+      <!-- Mobile Investor Dropdown -->
+      <div class="mobile-dropdown">
+        <button
+          class="mobile-dropdown-button"
+          (click)="toggleMobileDropdown()"
+          type="button"
+          [attr.aria-expanded]="mobileDropdownOpen"
+        >
+          {{ t('nav.investor') }}
+          <svg
+            class="dropdown-icon"
+            [class.rotate-180]="mobileDropdownOpen"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="mobile-dropdown-menu" [class.open]="mobileDropdownOpen">
+          <a class="mobile-dropdown-link" [routerLink]="'/documents'" (click)="closeMobileMenu()">{{
+            t('nav.documents')
+          }}</a>
+          <a class="mobile-dropdown-link" [routerLink]="'/reports'" (click)="closeMobileMenu()">{{
+            t('nav.reports')
+          }}</a>
+          <a
+            class="mobile-dropdown-link"
+            [routerLink]="'/financial-statements'"
+            (click)="closeMobileMenu()"
+            >{{ t('nav.other') }}</a
+          >
+        </div>
+      </div>
+
+      <a class="mobile-nav-link" [routerLink]="'/contacts'" (click)="closeMobileMenu()">{{
+        t('nav.contacts')
+      }}</a>
+
+      <!-- Language Button in Mobile Menu -->
+      <button
+        class="mobile-language-button"
+        (click)="toggleLang(); closeMobileMenu()"
+        type="button"
+      >
+        {{ currentLang | uppercase }}
+      </button>
+    </div>
+  </nav>
+</header>
